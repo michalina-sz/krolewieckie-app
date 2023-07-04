@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import NavBar from './components/NavBar';
+import Header from './components/Header';
+import AboutSection from './components/AboutSection';
+import Benefit from './components/Benefit';
+import AchievementsSection from './components/AchievementsSection';
+import data from './data';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const benefits = data.map((item) => {
+		return <Benefit key={item.id} {...item} />;
+	});
+	return (
+		<div className='App'>
+			<NavBar />
+			<Header />
+			<AboutSection />
+			<AchievementsSection />
+			<section className='benefitSection'>
+				<div className='benefits-box'>{benefits}</div>
+			</section>
+		</div>
+	);
 }
 
 export default App;
