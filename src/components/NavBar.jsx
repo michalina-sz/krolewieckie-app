@@ -1,5 +1,9 @@
 import React from 'react';
 import logo from '../img/logo.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+library.add(faBars);
 
 export default function NavBar() {
 	return (
@@ -19,6 +23,11 @@ export default function NavBar() {
 					<a href='#'>Kontakt</a>
 				</li>
 			</ul>
+			<div class='burger-btn-box'>
+				<button class='button'>
+					<FontAwesomeIcon className='icon' icon={faBars} />
+				</button>
+			</div>
 		</nav>
 	);
 }

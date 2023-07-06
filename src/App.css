@@ -6,6 +6,10 @@
   font-size: 14px;
 }
 
+body {
+  width: 100vw;
+}
+
 section {
   padding: 50px 20px;
 }
@@ -46,7 +50,8 @@ h2 {
 /* ---------------- NAV SECTION -------------- */
 nav {
   position: absolute;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   text-align: center;
   align-items: center;
   top: 0;
@@ -63,11 +68,11 @@ nav .logo {
 }
 nav .links {
   flex-grow: 1;
-  display: flex;
   justify-content: center;
   list-style: none;
   text-transform: uppercase;
   font-size: 14px;
+  display: none;
 }
 nav .links li a {
   padding: 10px 20px;
@@ -78,17 +83,26 @@ nav .links li a {
 nav .links li a:hover {
   color: rgba(255, 255, 255, 0.671);
 }
+nav .burger-btn-box {
+  display: flex;
+  justify-content: flex-end;
+}
+nav .burger-btn-box .button {
+  border: none;
+}
+nav .burger-btn-box .button .icon {
+  font-size: 25px;
+}
 
 /* ---------------- HERO SECTION -------------- */
 .hero-img {
   position: relative;
-  height: 40vh;
+  height: 100vh;
   background-image: linear-gradient(rgba(7, 3, 0, 0.603), rgba(52, 40, 40, 0.664)), url("./img/bg.jpeg");
   background-position: bottom;
   background-size: cover;
 }
 .hero-img .hero-text {
-  margin-top: 30px;
   text-align: center;
   position: absolute;
   top: 50%;
@@ -181,4 +195,20 @@ nav .links li a:hover {
   font-size: 35px;
   font-weight: bold;
   color: rgb(189, 158, 119);
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  nav .links {
+    display: flex;
+  }
+  nav .burger-btn-box {
+    display: none;
+  }
+  .hero-img {
+    height: 40vh;
+  }
+  .hero-img .hero-text {
+    margin-top: 30px;
+  }
 }

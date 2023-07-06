@@ -14,11 +14,11 @@ function App() {
 		<div className='App'>
 			<NavBar />
 			<Header />
-			<AboutSection />
+			{/* <AboutSection />
 			<AchievementsSection />
 			<section className='benefitSection'>
 				<div className='benefits-box'>{benefits}</div>
-			</section>
+			</section> */}
 		</div>
 	);
 }
