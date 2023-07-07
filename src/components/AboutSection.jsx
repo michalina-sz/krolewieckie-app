@@ -5,9 +5,6 @@ export default function AboutSection() {
 	return (
 		<section id='about' className='about'>
 			<div className='container about-container'>
-				<div className='about-img'>
-					<img src={aboutImg} alt='a' />
-				</div>
 				<div className='about-text'>
 					<h3>O nas</h3>
 					<div className="underline"></div>
@@ -19,6 +16,9 @@ export default function AboutSection() {
 						asortymentem dań domowych, które z powodzeniem trafiają w gusta
 						szerokiego grona naszych Klientów.
 					</p>
+				</div>
+				<div className='about-img'>
+					<img src={aboutImg} alt='a' />
 				</div>
 			</div>
 		</section>

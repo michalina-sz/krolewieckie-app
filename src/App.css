@@ -3,7 +3,10 @@
   padding: 0;
   margin: 0;
   font-family: "Montserrat", monospace;
-  font-size: 14px;
+}
+
+html {
+  font-size: 10px;
 }
 
 body {
@@ -11,11 +14,11 @@ body {
 }
 
 section {
-  padding: 50px 20px;
+  padding: 50px 25px;
 }
 
 h2 {
-  font-size: 23px;
+  font-size: 24px;
 }
 
 .underline {
@@ -38,7 +41,7 @@ h2 {
   border-radius: 8px;
   color: white;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 16px;
   cursor: pointer;
 }
 
@@ -62,8 +65,8 @@ nav {
   z-index: 1;
 }
 nav .logo {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   cursor: pointer;
 }
 nav .links {
@@ -91,7 +94,7 @@ nav .burger-btn-box .button {
   border: none;
 }
 nav .burger-btn-box .button .icon {
-  font-size: 25px;
+  font-size: 28px;
 }
 
 /* ---------------- HERO SECTION -------------- */
@@ -103,6 +106,7 @@ nav .burger-btn-box .button .icon {
   background-size: cover;
 }
 .hero-img .hero-text {
+  margin-top: 28px;
   text-align: center;
   position: absolute;
   top: 50%;
@@ -112,10 +116,16 @@ nav .burger-btn-box .button .icon {
 }
 .hero-img .hero-text h2 {
   letter-spacing: 4px;
+  font-size: 2.3rem;
 }
 .hero-img .hero-text p {
   margin: 15px 0;
-  font-size: 12px;
+  font-size: 15px;
+}
+.hero-img .hero-text .button {
+  padding: 8px 14px;
+  margin-top: 15px;
+  background-color: rgba(255, 255, 255, 0.151);
 }
 
 /* ---------------- ABOUT SECTION -------------- */
@@ -123,58 +133,40 @@ nav .burger-btn-box .button .icon {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 50px 40px;
 }
 .about .about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 800px;
+  flex-direction: column;
 }
 .about .about-container .about-img {
-  max-width: 400px;
+  max-width: 100%;
 }
 .about .about-container .about-img img {
   width: 100%;
-  height: 500px;
+  height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .about .about-container .about-text {
-  margin-top: 40px;
+  padding: 20px 0;
   flex: 1;
-  padding-left: 20px;
 }
 .about .about-container .about-text h3 {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: normal;
   text-transform: uppercase;
 }
 .about .about-container .about-text h2 {
-  margin-top: 10px;
-  font-size: 22px;
+  margin-top: 18px;
+  font-size: 24px;
 }
 .about .about-container .about-text p {
+  font-size: 14px;
   margin-top: 20px;
-}
-
-.benefitSection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-}
-.benefitSection .benefits-box {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-.benefitSection .benefit {
-  text-align: center;
-  max-width: 200px;
-}
-.benefitSection .benefit .icon svg {
-  font-size: 40px;
-  color: rgb(189, 158, 119);
-}
-.benefitSection .benefit p {
-  font-size: 12px;
 }
 
 .achievementSection {
@@ -182,19 +174,69 @@ nav .burger-btn-box .button .icon {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   background-color: rgb(23, 23, 23);
   color: white;
 }
 .achievementSection .achievements-box {
-  margin-top: 40px;
+  margin-top: 15px;
+  text-align: center;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+}
+.achievementSection .achievements-box .achievement {
+  margin-top: 25px;
 }
 .achievementSection .achievements-box .achievement .achievement-number {
-  font-size: 35px;
+  font-size: 33px;
   font-weight: bold;
   color: rgb(189, 158, 119);
+}
+.achievementSection .achievements-box .achievement .achievement-text {
+  font-size: 14px;
+}
+
+.benefitSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  padding: 38px;
+}
+.benefitSection .benefits-box {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+.benefitSection .benefit {
+  padding: 18px 0;
+  text-align: center;
+}
+.benefitSection .benefit .icon svg {
+  font-size: 50px;
+  color: rgb(189, 158, 119);
+}
+.benefitSection .benefit h3 {
+  margin: 15px 0 10px 0;
+  font-size: 17px;
+}
+.benefitSection .benefit p {
+  font-size: 15px;
+}
+
+.contactSection {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  background-color: rgb(23, 23, 23);
+  color: white;
+}
+.contactSection .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+.contactSection .logo img {
+  width: 40px;
+  height: 40px;
 }
 
 /* Medium devices (landscape tablets, 768px and up) */

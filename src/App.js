@@ -3,6 +3,7 @@ import Header from './components/Header';
 import AboutSection from './components/AboutSection';
 import Benefit from './components/Benefit';
 import AchievementsSection from './components/AchievementsSection';
+import ContactSection from './components/ContactSection';
 import data from './data';
 import './App.css';
 
@@ -14,11 +15,12 @@ function App() {
 		<div className='App'>
 			<NavBar />
 			<Header />
-			{/* <AboutSection />
+			<AboutSection />
 			<AchievementsSection />
 			<section className='benefitSection'>
 				<div className='benefits-box'>{benefits}</div>
-			</section> */}
+			</section>
+			<ContactSection />
 		</div>
 	);
 }
