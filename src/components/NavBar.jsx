@@ -3,7 +3,7 @@ import logo from '../img/logo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-library.add(faBars);
+// library.add(faBars);
 
 export default function NavBar() {
 	return (
@@ -25,7 +25,8 @@ export default function NavBar() {
 			</ul>
 			<div class='burger-btn-box'>
 				<button class='button'>
-					<FontAwesomeIcon className='icon' icon={faBars} />
+					x
+					{/* <FontAwesomeIcon className='icon' icon={faBars} /> */}
 				</button>
 			</div>
 		</nav>

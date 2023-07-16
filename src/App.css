@@ -6,7 +6,7 @@
 }
 
 html {
-  font-size: 10px;
+  font-size: 16px;
 }
 
 body {
@@ -14,7 +14,7 @@ body {
 }
 
 section {
-  padding: 50px 25px;
+  padding: 60px 25px;
 }
 
 h2 {
@@ -25,7 +25,7 @@ h2 {
   margin-top: 5px;
   height: 2px;
   width: 30px;
-  background-color: rgb(189, 158, 119);
+  background-color: rgb(205, 162, 123);
 }
 
 .container {
@@ -52,21 +52,23 @@ h2 {
 
 /* ---------------- NAV SECTION -------------- */
 nav {
-  position: absolute;
+  position: fixed;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   text-align: center;
   align-items: center;
   top: 0;
   left: 0;
-  padding: 50px 40px;
+  padding: 10px 40px;
   width: 100%;
-  height: 60px;
+  height: 100px;
+  background-color: rgb(211, 184, 159);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.219);
   z-index: 1;
 }
 nav .logo {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   cursor: pointer;
 }
 nav .links {
@@ -99,6 +101,7 @@ nav .burger-btn-box .button .icon {
 
 /* ---------------- HERO SECTION -------------- */
 .hero-img {
+  margin-top: 100px;
   position: relative;
   height: 100vh;
   background-image: linear-gradient(rgba(7, 3, 0, 0.603), rgba(52, 40, 40, 0.664)), url("./img/bg.jpeg");
@@ -116,11 +119,10 @@ nav .burger-btn-box .button .icon {
 }
 .hero-img .hero-text h2 {
   letter-spacing: 4px;
-  font-size: 2.3rem;
+  font-size: 23px;
 }
 .hero-img .hero-text p {
   margin: 15px 0;
-  font-size: 15px;
 }
 .hero-img .hero-text .button {
   padding: 8px 14px;
@@ -130,6 +132,7 @@ nav .burger-btn-box .button .icon {
 
 /* ---------------- ABOUT SECTION -------------- */
 .about {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,16 +150,16 @@ nav .burger-btn-box .button .icon {
 }
 .about .about-container .about-img img {
   width: 100%;
-  height: 300px;
+  height: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+  position: sticky;
 }
 .about .about-container .about-text {
-  padding: 20px 0;
+  padding: 0 0 20px 0;
   flex: 1;
 }
 .about .about-container .about-text h3 {
-  font-size: 14px;
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -165,7 +168,6 @@ nav .burger-btn-box .button .icon {
   font-size: 24px;
 }
 .about .about-container .about-text p {
-  font-size: 14px;
   margin-top: 20px;
 }
 
@@ -187,38 +189,35 @@ nav .burger-btn-box .button .icon {
   margin-top: 25px;
 }
 .achievementSection .achievements-box .achievement .achievement-number {
-  font-size: 33px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 70px;
   font-weight: bold;
-  color: rgb(189, 158, 119);
+  color: rgb(205, 162, 123);
 }
 .achievementSection .achievements-box .achievement .achievement-text {
-  font-size: 14px;
+  margin-top: 18px;
 }
 
-.benefitSection {
+.benefit {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   padding: 38px;
 }
-.benefitSection .benefits-box {
+.benefit__box {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
 }
-.benefitSection .benefit {
-  padding: 18px 0;
-  text-align: center;
-}
-.benefitSection .benefit .icon svg {
+.benefit__box__box-icon svg {
   font-size: 50px;
-  color: rgb(189, 158, 119);
+  color: rgb(205, 162, 123);
 }
-.benefitSection .benefit h3 {
+.benefit__box h3 {
   margin: 15px 0 10px 0;
   font-size: 17px;
 }
-.benefitSection .benefit p {
+.benefit__box p {
   font-size: 15px;
 }
 
@@ -239,6 +238,11 @@ nav .burger-btn-box .button .icon {
   height: 40px;
 }
 
+.mapContainer {
+  width: 100%;
+  height: 100%;
+}
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   nav .links {
@@ -252,5 +256,42 @@ nav .burger-btn-box .button .icon {
   }
   .hero-img .hero-text {
     margin-top: 30px;
+  }
+  .about {
+    height: auto;
+  }
+  .about .about-container {
+    max-width: 800px;
+    flex-direction: row;
+  }
+  .about .about-container .about-img {
+    width: 50%;
+  }
+  .about .about-container .about-img img {
+    width: 100%;
+    height: auto;
+  }
+  .about .about-container .about-text {
+    margin-right: 15px;
+  }
+  .about .about-container .about-text h3 {
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+  .about .about-container .about-text h2 {
+    margin-top: 18px;
+    font-size: 24px;
+  }
+  .about .about-container .about-text p {
+    margin-top: 20px;
+  }
+  .achievementSection .achievements-box {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .achievementSection .achievements-box .achievement .achievement-number {
+    font-size: 80px;
+  }
+  .achievementSection .achievements-box .achievement .achievement-text {
+    font-size: 18px;
   }
 }

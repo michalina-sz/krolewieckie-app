@@ -1,7 +1,11 @@
 $font-light: white;
 $font-light-hover: rgba(255, 255, 255, 0.671);
 $background-dark: rgb(23, 23, 23);
-$icon: rgb(189, 158, 119);
+//$background-light: rgb(226, 193, 163);
+$background-light: rgb(211, 184, 159);
+// $background-light: rgb(205, 162, 123);
+// $icon: rgb(189, 158, 119);
+$icon: rgb(205, 162, 123);
 
 * {
 	box-sizing: border-box;
@@ -11,14 +15,14 @@ $icon: rgb(189, 158, 119);
 }
 
 html {
-	font-size: 10px;
+	font-size: 16px;
 }
 body {
 	width: 100vw;
 }
 
 section {
-	padding: 50px 25px;
+	padding: 60px 25px;
 }
 
 h2 {
@@ -55,21 +59,23 @@ h2 {
 /* ---------------- NAV SECTION -------------- */
 
 nav {
-	position: absolute;
+	position: fixed;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	text-align: center;
 	align-items: center;
 	top: 0;
 	left: 0;
-	padding: 50px 40px;
+	padding: 10px 40px;
 	width: 100%;
-	height: 60px;
+	height: 100px;
+	background-color: $background-light;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.219);
 	z-index: 1;
 
 	.logo {
-		width: 90px;
-		height: 90px;
+		width: 80px;
+		height: 80px;
 		cursor: pointer;
 	}
 
@@ -108,6 +114,7 @@ nav {
 /* ---------------- HERO SECTION -------------- */
 
 .hero-img {
+	margin-top: 100px;
 	position: relative;
 	height: 100vh;
 	background-image: linear-gradient(
@@ -129,11 +136,10 @@ nav {
 
 		h2 {
 			letter-spacing: 4px;
-			font-size: 2.3rem;
+			font-size: 23px;
 		}
 		p {
 			margin: 15px 0;
-			font-size: 15px;
 		}
 		.button {
 			padding: 8px 14px;
@@ -146,6 +152,7 @@ nav {
 /* ---------------- ABOUT SECTION -------------- */
 
 .about {
+	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -163,15 +170,15 @@ nav {
 
 			img {
 				width: 100%;
-				height: 300px;
+				height: 50%;
 				object-fit: cover;
+				position: sticky;
 			}
 		}
 		.about-text {
-			padding: 20px 0;
+			padding: 0 0 20px 0;
 			flex: 1;
 			h3 {
-				font-size: 14px;
 				font-weight: normal;
 				text-transform: uppercase;
 			}
@@ -181,7 +188,6 @@ nav {
 				font-size: 24px;
 			}
 			p {
-				font-size: 14px;
 				margin-top: 20px;
 			}
 		}
@@ -204,48 +210,51 @@ nav {
 		.achievement {
 			margin-top: 25px;
 			.achievement-number {
-				font-size: 33px;
+				font-family: 'Cormorant Garamond', serif;
+				font-size: 70px;
 				font-weight: bold;
 				color: $icon;
 			}
 			.achievement-text {
-				font-size: 14px;
+				margin-top: 18px;
 			}
 		}
 	}
 }
 
-.benefitSection {
+.benefit {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 100vw;
 	padding: 38px;
 
-	.benefits-box {
+	.benefit-box {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
 		// gap: 30px;
-	}
 
-	.benefit {
-		padding: 18px 0;
-		text-align: center;
-		// max-width: 200px;
-
-		.icon svg {
+		.benefit-box-icon svg {
 			font-size: 50px;
 			color: $icon;
 		}
-		h3 {
+		.benefit-box-text {
+			.benefit-title {
 			margin: 15px 0 10px 0;
 			font-size: 17px;
 		}
 
-		p {
+		.benefit-text {
 			font-size: 15px;
 		}
 	}
+	}
+
+	// .benefit {
+	// 	padding: 18px 0;
+	// 	text-align: center;
+	// 	// max-width: 200px;
+	// }
 }
 
 .contactSection {
@@ -263,8 +272,12 @@ nav {
 			width: 40px;
 			height: 40px;
 		}
-
 	}
+}
+
+.mapContainer {
+	width: 100%;
+	height: 100%;
 }
 
 // /* Extra small devices (phones, 600px and down) */
@@ -291,7 +304,55 @@ nav {
 			margin-top: 30px;
 		}
 	}
-}
+
+	.about {
+		height: auto;
+
+		.about-container {
+			max-width: 800px;
+			flex-direction: row;
+
+			.about-img {
+				width: 50%;
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+			.about-text {
+				margin-right: 15px;
+				h3 {
+					font-weight: normal;
+					text-transform: uppercase;
+				}
+
+				h2 {
+					margin-top: 18px;
+					font-size: 24px;
+				}
+				p {
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+	
+	.achievementSection {
+		.achievements-box {
+			grid-template-columns: repeat(3, 1fr);
+	
+			.achievement {
+				.achievement-number {
+					font-size: 80px;
+				}
+				.achievement-text {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+
+
 
 // /* Large devices (laptops/desktops, 992px and up) */
 // @media only screen and (min-width: 992px) {...}

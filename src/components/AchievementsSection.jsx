@@ -8,8 +8,8 @@ export default function AchievementsSection() {
 			<h2>Nasze statystyki</h2>
 			<div className='achievements-box'>
 				<div className='achievement'>
-					<div className='achievement-number'>30 lat</div>
-					<div className='achievement-text'>na rynku</div>
+					<div className='achievement-number'>30</div>
+					<div className='achievement-text'>lat na rynku</div>
 				</div>
 				<div className='achievement'>
 					<div className='achievement-number'>7</div>

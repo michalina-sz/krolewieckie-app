@@ -10,7 +10,7 @@ export default function ContactSection() {
                     <h2>Królewieckie</h2>
 				</div>
                 <div className="social-media">
-                    .<FontAwesomeIcon icon={solid("facebook")} />
+                    {/* .<FontAwesomeIcon icon={solid("facebook")} /> */}
                 </div>
 			</div>
 		</section>
