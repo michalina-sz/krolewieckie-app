@@ -5,7 +5,7 @@ export default [
 		title: 'Duży wybór',
 		description:
 			'W naszej ofercie znajduje się aż dziesięć rodzajów ręcznie lepionych pierogów, które przypominają w smaku te robione przed laty przez nasze mamy i babcie. Oprócz nich na asortyment składają się też surówki, sałatki, kotlety, kluski, krokiety, smalec i wiele innych.',
-		class: '',
+		class: 'benefit-box-icon',
 	},
 	{
 		id: 2,
@@ -13,7 +13,7 @@ export default [
 		title: 'Stawiamy na zdrowie',
 		description:
 			'Nasze dania nie zawierają konserwantów, barwników czy dodatków smakowych, są więc zdrowe i pożywne. To właśnie dlatego przez dwadzieścia lat znajdują uznanie u wielu stałych klientów, którzy nam zaufali i docenili naszą kuchnię.',
-		class: 'benefit__box-icon--right',
+		class: 'benefit-box-icon benefit-box-icon--right',
 	},
 	{
 		id: 3,
@@ -21,7 +21,7 @@ export default [
 		title: 'Przenosimy w czasie',
 		description:
 			'Dzięki naszym paniom kucharkom wrócisz wspomnieniami do beztroskich czasów dzieciństwa, przypomną Ci się zapachy z babcinej kuchni, a feeria smaków domowych potraw zachwyci i chociaż na chwilę przeniesie Cię w przeszłość.',
-		class: '',
+		class: 'benefit-box-icon',
 	},
 	{
 		id: 4,
@@ -29,7 +29,7 @@ export default [
 		title: 'Jesteście dla nas najważniejsi',
 		description:
 			'Uznanie klientów oraz wysoka ocena pracy i talentów naszych pań kucharek to dla nas motywacja do stałego podwyższania jakości wyrobów i usług. Staramy się elastycznie podchodzić do potrzeb klientów: stopniowo rozszerzamy asortyment, by trafiać w różne kulinarne upodobania, dzięki czemu każdy może dostosować zakup do swoich indywidualnych potrzeb.',
-		class: 'benefit__box-icon--right',
+		class: 'benefit-box-icon benefit-box-icon--right',
 	},
 	{
 		id: 5,
@@ -37,7 +37,7 @@ export default [
 		title: 'Wysoka jakość',
 		description:
 			'Do produkcji wykorzystujemy wyłącznie wysokojakościowe składniki. Mięsa, przyprawy i warzywa pochodzą od lokalnych dostawców, pozbawione są dodatków chemicznych, dzięki czemu cechują się niepowtarzalnym smakiem i aromatem.',
-		class: '',
+		class: 'benefit-box-icon',
 	},
 ];
 

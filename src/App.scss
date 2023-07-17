@@ -27,6 +27,7 @@ section {
 
 h2 {
 	font-size: 24px;
+	margin-bottom: 20px;
 }
 
 .underline {
@@ -202,10 +203,11 @@ nav {
 	background-color: $background-dark;
 	color: $font-light;
 	.achievements-box {
-		margin-top: 15px;
 		text-align: center;
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
+		justify-content: center;
+		align-items: center;
 
 		.achievement {
 			margin-top: 25px;
@@ -223,15 +225,18 @@ nav {
 }
 
 .benefit {
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 	justify-content: center;
 	align-items: center;
 	width: 100vw;
 	padding: 38px;
 
 	.benefit-box {
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: auto auto;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
 		// gap: 30px;
 
 		.benefit-box-icon svg {
@@ -240,14 +245,14 @@ nav {
 		}
 		.benefit-box-text {
 			.benefit-title {
-			margin: 15px 0 10px 0;
-			font-size: 17px;
-		}
+				margin: 15px 0 10px 0;
+				font-size: 17px;
+			}
 
-		.benefit-text {
-			font-size: 15px;
+			.benefit-text {
+				font-size: 15px;
+			}
 		}
-	}
 	}
 
 	// .benefit {
@@ -257,27 +262,79 @@ nav {
 	// }
 }
 
-.contactSection {
-	display: grid;
-	grid-template-columns: repeat(1, 1fr);
-	background-color: $background-dark;
-	color: $font-light;
-
-	.logo {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: 25px;
-		img {
-			width: 40px;
-			height: 40px;
-		}
+.map {
+	width: 100vw;
+	height: 60vh;
+	text-align: center;
+	.map-container {
+		height: 100%;
+		width: 100%;
 	}
 }
 
-.mapContainer {
-	width: 100%;
-	height: 100%;
+.contactSection {
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
+	background-color: $background-dark;
+	color: $font-light;
+
+	.logo-box {
+		.logo {
+			display: none;
+			justify-content: center;
+			align-items: center;
+			font-size: 25px;
+			img {
+				width: 40px;
+				height: 40px;
+			}
+		}
+		.social-media {
+			margin-top: 22px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			svg {
+				padding: 0 10px;
+				font-size: 36px;
+				color: $icon;
+			}
+		}
+	}
+	.contact-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		h4 {
+			font-size: 18px;
+			margin-bottom: 15px;
+			text-align: center;
+		}
+		.contact-element {
+			display: flex;
+			margin-top: 10px;
+			padding: 10px;
+			align-items: center;
+
+			svg {
+				padding: 5px;
+				margin-right: 10px;
+				font-size: 25px;
+				color: $icon;
+			}
+			a {
+				padding: 5px;
+				color: $font-light;
+				text-decoration: none;
+			}
+			a:hover {
+				color: $font-light;
+				color: $font-light-hover;
+			}
+		}
+	}
 }
 
 // /* Extra small devices (phones, 600px and down) */
@@ -336,11 +393,11 @@ nav {
 			}
 		}
 	}
-	
+
 	.achievementSection {
 		.achievements-box {
 			grid-template-columns: repeat(3, 1fr);
-	
+
 			.achievement {
 				.achievement-number {
 					font-size: 80px;
@@ -352,8 +409,20 @@ nav {
 		}
 	}
 
+	.benefit {
+		.benefit-box {
+			.benefit-box-icon svg {
+			}
+			.benefit-box-text {
+				.benefit-title {
+				}
 
-
+				.benefit-text {
+				}
+			}
+		}
+	}
+}
 // /* Large devices (laptops/desktops, 992px and up) */
 // @media only screen and (min-width: 992px) {...}
 

@@ -23,8 +23,8 @@ export default function NavBar() {
 					<a href='#'>Kontakt</a>
 				</li>
 			</ul>
-			<div class='burger-btn-box'>
-				<button class='button'>
+			<div className='burger-btn-box'>
+				<button className='button'>
 					x
 					{/* <FontAwesomeIcon className='icon' icon={faBars} /> */}
 				</button>
