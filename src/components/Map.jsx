@@ -1,19 +1,23 @@
 import { useMemo } from 'react';
 import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
+import Shop from './Shop';
+import shops from '../data/shops';
 
 export default function Map() {
 	const { isLoaded } = useLoadScript({
 		googleMapsApiKey: 'AIzaSyALqPbtl2tIQL2aYIA1j9fvV_2ShivoLXE',
 	});
-	const shops = [
-		{ lat: 51.1234, lng: -0.4567, name: 'Sklep 1', address: 'Adres sklepu 1' },
-		{ lat: 51.2345, lng: -0.5678, name: 'Sklep 2', address: 'Adres sklepu 2' },
-	];
+	const shop = shops.map((item) => {
+		return <Shop key={item.id} {...item} />;
+	});
 	const center = useMemo(() => ({ lat: 52, lng: 21 }), []);
 	if (!isLoaded) return <div>Loading...</div>;
 	return (
 		<section className='map'>
-			<h2>Nasze sklepy</h2>
+			<h2>Gdzie kupić</h2>
+			<div className="shop-list-box">
+				{shop}
+			</div>
 			<GoogleMap
 				zoom={10}
 				center={center}

@@ -274,22 +274,19 @@ nav {
 
 .contactSection {
 	display: flex;
+	padding-bottom: 40px;
 	flex-direction: column-reverse;
 	justify-content: center;
 	align-items: center;
 	background-color: $background-dark;
 	color: $font-light;
 
-	.logo-box {
+	.contact-box {
 		.logo {
 			display: none;
 			justify-content: center;
 			align-items: center;
 			font-size: 25px;
-			img {
-				width: 40px;
-				height: 40px;
-			}
 		}
 		.social-media {
 			margin-top: 22px;
@@ -334,6 +331,24 @@ nav {
 				color: $font-light-hover;
 			}
 		}
+	}
+}
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: $background-dark;
+	color: $font-light;
+
+	.underline {
+		width: 85vw;
+		color: rgba(205, 163, 123, 0.329);
+	}
+	p {
+		padding: 12px 5px;
+		font-size: 13px;
+		color: $font-light-hover;
 	}
 }
 
@@ -422,7 +437,69 @@ nav {
 			}
 		}
 	}
+
+	.contactSection {
+		width: 100%;
+		max-width: 800px;
+		justify-content: space-evenly;
+		flex-direction: row;
+
+		.contact-box {
+			.logo {
+				display: flex;
+				flex-direction: column;
+				img {
+					width: 110px;
+					height: 110px;
+				}
+				h2 {
+					margin-top: 20px;
+					margin-bottom: 0;
+					font-weight: normal;
+					font-size: 15px;
+				}
+			}
+			.social-media {
+				margin-top: 20px;
+				svg {
+				}
+			}
+		}
+		.contact-box {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			h4 {
+				font-size: 18px;
+				margin-bottom: 15px;
+				text-align: center;
+			}
+			.contact-element {
+				display: flex;
+				margin-top: 10px;
+				padding: 10px;
+				align-items: center;
+
+				svg {
+					padding: 5px;
+					margin-right: 10px;
+					font-size: 25px;
+					color: $icon;
+				}
+				a {
+					padding: 5px;
+					color: $font-light;
+					text-decoration: none;
+				}
+				a:hover {
+					color: $font-light;
+					color: $font-light-hover;
+				}
+			}
+		}
+	}
 }
+
 // /* Large devices (laptops/desktops, 992px and up) */
 // @media only screen and (min-width: 992px) {...}
 

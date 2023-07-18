@@ -13,7 +13,7 @@ library.add(faFacebook, faAt, faPhone, faLocationDot);
 export default function ContactSection() {
 	return (
 		<section className='contactSection'>
-			<div className='logo-box'>
+			<div className='contact-box'>
 				<div className='logo'>
 					<img src={logo} className='logo' alt='Logo Królewieckie' />
 					<h2>KRÓLEWIECKIE</h2>
@@ -41,9 +41,6 @@ export default function ContactSection() {
 					</a>
 				</div>
 			</div>
-			{/* <footer>
-				<p>© 2023 Królewieckie sp.z.o.o</p>
-			</footer> */}
 		</section>
 	);
 }
