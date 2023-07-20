@@ -41,6 +41,11 @@ export default function ContactSection() {
 					</a>
 				</div>
 			</div>
+			<div className="contact-box">
+				<a href="">o nas</a>
+				<a href="">nasze produkty</a>
+				<a href="">gdzie kupic</a>
+			</div>
 		</section>
 	);
 }

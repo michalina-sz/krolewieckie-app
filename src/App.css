@@ -6,12 +6,13 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 10px;
 }
 
 body {
   width: 100vw;
   background-color: white;
+  font-size: 1.4rem;
 }
 
 section {
@@ -19,8 +20,9 @@ section {
 }
 
 h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 0.5em;
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 .underline {
@@ -28,6 +30,13 @@ h2 {
   height: 2px;
   width: 30px;
   background-color: rgb(205, 162, 123);
+}
+
+.underline-second {
+  margin: 0 auto 2em;
+  width: 60px;
+  height: 4px;
+  background-color: rgb(23, 23, 23);
 }
 
 .container {
@@ -64,7 +73,7 @@ nav {
   padding: 10px 40px;
   width: 100%;
   height: 100px;
-  background-color: blanchedalmond;
+  background-color: whitesmoke;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.219);
   z-index: 1;
 }
@@ -168,6 +177,7 @@ nav .burger-btn-box .button .icon {
   text-transform: uppercase;
 }
 .about .about-container .about-text h2 {
+  text-align: left;
   margin-top: 18px;
   font-size: 24px;
 }
@@ -180,7 +190,7 @@ nav .burger-btn-box .button .icon {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(23, 23, 23);
+  background: linear-gradient(45deg, rgb(23, 23, 23), rgb(42, 40, 40));
   color: white;
 }
 .achievementSection .achievements-box {
@@ -195,7 +205,7 @@ nav .burger-btn-box .button .icon {
 }
 .achievementSection .achievements-box .achievement .achievement-number {
   font-family: "Cormorant Garamond", serif;
-  font-size: 70px;
+  font-size: 55px;
   font-weight: bold;
   color: rgb(205, 162, 123);
 }
@@ -205,47 +215,124 @@ nav .burger-btn-box .button .icon {
 
 .benefit-section {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+}
+.benefit-section h2 {
+  margin-bottom: 2em;
+  font-size: 2.5rem;
+  color: rgb(23, 23, 23);
   text-align: center;
 }
 .benefit-section .benefit-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  padding: 0 3em;
+}
+.benefit-section .benefit-container .benefit {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  padding: 38px;
-  gap: 30px;
+  text-align: center;
+  padding: 1em 0.3em;
 }
-.benefit-section .benefit-container .benefit svg {
-  font-size: 50px;
-  color: rgb(205, 162, 123);
-  background-color: floralwhite;
-  width: 50px;
-  height: 50px;
-  padding: 10px 15px;
+.benefit-section .benefit-container .benefit .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: whitesmoke;
   border-radius: 50%;
 }
-.benefit-section .benefit-container .benefit .benefit-info .benefit-title {
-  margin: 15px 0 10px 0;
-  font-size: 17px;
+.benefit-section .benefit-container .benefit .icon svg {
+  text-align: center;
+  font-size: 3rem;
+  color: rgb(205, 162, 123);
 }
-.benefit-section .benefit-container .benefit .benefit-info .benefit-text {
+.benefit-section .benefit-container .benefit .benefit-info h3 {
+  padding: 1em 0;
+  color: rgb(23, 23, 23);
+}
+.benefit-section .benefit-container .benefit .benefit-info p {
+  color: #464545;
+}
+
+section.offers {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(45deg, whitesmoke, floralwhite);
+}
+section.offers .section-heading {
+  color: white;
+}
+section.offers .wrapper {
+  padding: 20px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+section.offers .underline {
+  background-color: white;
+}
+section.offers .offers__option {
+  display: flex;
+  margin: 10px 0;
+  box-shadow: 5px 5px 10px rgba(34, 34, 34, 0.19);
+  background-color: white;
+  overflow: hidden;
+}
+section.offers .offers__option-img {
+  width: 40%;
+  height: 100%;
+}
+section.offers .offers__option-info {
+  padding: 20px;
+  z-index: 10;
+  background-color: white;
+}
+section.offers .offers__option-heading {
+  margin-bottom: 5px;
+  font-size: 25px;
+  font-weight: 300;
+}
+section.offers .offers__option-text {
+  margin-bottom: 5px;
+  font-size: 13px;
+  color: rgb(23, 23, 23);
+}
+section.offers .offers__option-btn {
+  margin-top: 10px;
+  padding: 8px;
+  width: 100%;
+  color: white;
+  background-color: #191970;
+  text-transform: uppercase;
+  font-weight: 200;
   font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+section.offers .offers__option-btn::before {
+  background-color: rgb(205, 162, 123);
+}
+section.offers .offers__option-btn:hover {
+  background-color: rgb(205, 162, 123);
 }
 
 .map {
   width: 100vw;
   height: 100vh;
   text-align: center;
+  background-color: whitesmoke;
 }
 .map .container {
   width: 100%;
   height: 100%;
 }
 .map .container .map-container {
-  height: 80%;
+  height: 100%;
   width: 100%;
 }
 

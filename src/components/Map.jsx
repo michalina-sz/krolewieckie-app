@@ -11,9 +11,10 @@ export default function Map() {
 	if (!isLoaded) return <div>Loading...</div>;
 	return (
 		<section className='map'>
-			<h2>Gdzie kupić</h2>
 			<div className='container'>
 				<div className='shop-list-box'>
+			<h2>Gdzie kupić</h2>
+			<div className="underline"></div>
 					{shops.map((shop) => (
 						<Shop key={shop.id} {...shop} />
 					))}
