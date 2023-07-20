@@ -19,14 +19,14 @@ export default function ContactSection() {
 					<h2>KRÓLEWIECKIE</h2>
 				</div>
 				<div className='social-media'>
-					<FontAwesomeIcon icon={faFacebook} />
+					<a href="https://www.facebook.com/recznie.lepione.pierogi.swojskie.wyroby/"><FontAwesomeIcon icon={faFacebook} /></a>
 				</div>
 			</div>
 			<div className='contact-box'>
 				<h4>KONTAKT</h4>
 				<div className='contact-element'>
 					<FontAwesomeIcon icon={faLocationDot} />
-					<a href='https://goo.gl/maps/2TM32UWEhGcjNxLW6'>
+					<a href='https://goo.gl/maps/2TM32UWEhGcjNxLW6' target='_blank'>
 						Wspólna 76, 05-303 Królewiec
 					</a>
 				</div>
