@@ -11,11 +11,9 @@ library.add(faAward, faHeart, faLightbulb, faThumbsUp);
 
 export default function Benefit(props) {
 	return (
-		<div className='benefit-box'>
-			<div className={props.class}>
-				<FontAwesomeIcon icon={props.icon} />
-			</div>
-			<div className='benefit-box-text'>
+		<div className='benefit'>
+			<FontAwesomeIcon icon={props.icon} />
+			<div className='benefit-info'>
 				<h3 className='benefit-title'>{props.title}</h3>
 				<p className='benefit-text'>{props.description}</p>
 			</div>

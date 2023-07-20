@@ -11,6 +11,7 @@ html {
 
 body {
   width: 100vw;
+  background-color: white;
 }
 
 section {
@@ -63,7 +64,7 @@ nav {
   padding: 10px 40px;
   width: 100%;
   height: 100px;
-  background-color: rgb(211, 184, 159);
+  background-color: blanchedalmond;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.219);
   z-index: 1;
 }
@@ -85,6 +86,7 @@ nav .links li a {
   color: white;
   text-decoration: none;
   transition: color 0.3s;
+  color: rgb(23, 23, 23);
 }
 nav .links li a:hover {
   color: rgba(255, 255, 255, 0.671);
@@ -107,7 +109,9 @@ nav .burger-btn-box .button .icon {
   height: 100vh;
   background-image: linear-gradient(rgba(7, 3, 0, 0.603), rgba(52, 40, 40, 0.664)), url("./img/bg.jpeg");
   background-position: bottom;
+  background-attachment: fixed;
   background-size: cover;
+  background-attachment: fixed;
 }
 .hero-img .hero-text {
   margin-top: 28px;
@@ -154,7 +158,6 @@ nav .burger-btn-box .button .icon {
   height: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-  position: sticky;
 }
 .about .about-container .about-text {
   padding: 0 0 20px 0;
@@ -200,29 +203,35 @@ nav .burger-btn-box .button .icon {
   margin-top: 18px;
 }
 
-.benefit {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  padding: 38px;
-}
-.benefit .benefit-box {
-  grid-template-rows: auto auto;
+.benefit-section {
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.benefit .benefit-box .benefit-box-icon svg {
+.benefit-section .benefit-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  padding: 38px;
+  gap: 30px;
+}
+.benefit-section .benefit-container .benefit svg {
   font-size: 50px;
   color: rgb(205, 162, 123);
+  background-color: floralwhite;
+  width: 50px;
+  height: 50px;
+  padding: 10px 15px;
+  border-radius: 50%;
 }
-.benefit .benefit-box .benefit-box-text .benefit-title {
+.benefit-section .benefit-container .benefit .benefit-info .benefit-title {
   margin: 15px 0 10px 0;
   font-size: 17px;
 }
-.benefit .benefit-box .benefit-box-text .benefit-text {
+.benefit-section .benefit-container .benefit .benefit-info .benefit-text {
   font-size: 15px;
 }
 
@@ -370,6 +379,9 @@ footer p {
   .achievementSection .achievements-box .achievement .achievement-text {
     font-size: 18px;
   }
+  .benefit-section .benefit-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .contactSection {
     width: 100%;
     max-width: 800px;
@@ -423,5 +435,11 @@ footer p {
   .contactSection .contact-box .contact-element a:hover {
     color: white;
     color: rgba(255, 255, 255, 0.671);
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .benefit-section .benefit-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

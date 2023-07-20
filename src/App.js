@@ -6,7 +6,7 @@ import AchievementsSection from './components/AchievementsSection';
 import data from './data/data';
 import './App.css';
 import Map from './components/Map';
-import Products from './components/Products';
+import Products from './components/Product';
 import Footer from './components/Footer';
 
 function App() {
@@ -20,8 +20,8 @@ function App() {
 			<Header />
 			<AboutSection />
 			<AchievementsSection />
-			<section className='benefit'>
-				<div className='benefit__box'>{benefits}</div>
+			<section className='benefit-section container'>
+				<div className='benefit-container'>{benefits}</div>
 			</section>
 			<Products />
 			<Map />

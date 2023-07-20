@@ -19,6 +19,7 @@ html {
 }
 body {
 	width: 100vw;
+	background-color: white;
 }
 
 section {
@@ -70,7 +71,7 @@ nav {
 	padding: 10px 40px;
 	width: 100%;
 	height: 100px;
-	background-color: $background-light;
+	background-color: blanchedalmond;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.219);
 	z-index: 1;
 
@@ -93,6 +94,7 @@ nav {
 			color: $font-light;
 			text-decoration: none;
 			transition: color 0.3s;
+			color: $background-dark;
 		}
 		li a:hover {
 			color: $font-light-hover;
@@ -124,7 +126,9 @@ nav {
 		),
 		url('./img/bg.jpeg');
 	background-position: bottom;
+	background-attachment: fixed;
 	background-size: cover;
+	background-attachment: fixed;
 
 	.hero-text {
 		margin-top: 28px;
@@ -173,7 +177,6 @@ nav {
 				width: 100%;
 				height: 50%;
 				object-fit: cover;
-				position: sticky;
 			}
 		}
 		.about-text {
@@ -224,33 +227,40 @@ nav {
 	}
 }
 
-.benefit {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+.benefit-section {
+	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100vw;
-	padding: 38px;
+	text-align: center;
 
-	.benefit-box {
-		grid-template-rows: auto auto;
+	.benefit-container {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
 		justify-content: center;
 		align-items: center;
-		text-align: center;
-		// gap: 30px;
+		width: 100vw;
+		padding: 38px;
+		gap: 30px;
 
-		.benefit-box-icon svg {
-			font-size: 50px;
-			color: $icon;
-		}
-		.benefit-box-text {
-			.benefit-title {
-				margin: 15px 0 10px 0;
-				font-size: 17px;
+		.benefit {
+			svg {
+				font-size: 50px;
+				color: $icon;
+				background-color: floralwhite;
+				width: 50px;
+				height: 50px;
+				padding: 10px 15px;
+				border-radius: 50%;
 			}
+			.benefit-info {
+				.benefit-title {
+					margin: 15px 0 10px 0;
+					font-size: 17px;
+				}
 
-			.benefit-text {
-				font-size: 15px;
+				.benefit-text {
+					font-size: 15px;
+				}
 			}
 		}
 	}
@@ -430,21 +440,14 @@ footer {
 			}
 		}
 	}
+	.benefit-section {
+		.benefit-container {
+			grid-template-columns: repeat(2, 1fr);
 
-	.benefit {
-		.benefit-box {
-			.benefit-box-icon svg {
-			}
-			.benefit-box-text {
-				.benefit-title {
-				}
-
-				.benefit-text {
-				}
+			.benefit {
 			}
 		}
 	}
-
 	.contactSection {
 		width: 100%;
 		max-width: 800px;
@@ -506,9 +509,26 @@ footer {
 		}
 	}
 }
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.benefit-section {
+		.benefit-container {
+			grid-template-columns: repeat(3, 1fr);
 
-// /* Large devices (laptops/desktops, 992px and up) */
-// @media only screen and (min-width: 992px) {...}
+			.benefit {
+				svg {
+				}
+				.benefit-info {
+					.benefit-title {
+					}
+
+					.benefit-text {
+					}
+				}
+			}
+		}
+	}
+}
 
 // /* Extra large devices (large laptops and desktops, 1200px and up) */
 // @media only screen and (min-width: 1200px) {...}
