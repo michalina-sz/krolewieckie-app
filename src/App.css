@@ -210,12 +210,14 @@ nav .burger-btn-box .button .icon {
   color: rgb(205, 162, 123);
 }
 .achievementSection .achievements-box .achievement .achievement-text {
+  font-size: 14px;
   margin-top: 18px;
 }
 
 .benefit-section {
   display: flex;
   flex-direction: column;
+  max-width: 1600px;
 }
 .benefit-section h2 {
   margin-bottom: 2em;
@@ -255,7 +257,9 @@ nav .burger-btn-box .button .icon {
   color: rgb(23, 23, 23);
 }
 .benefit-section .benefit-container .benefit .benefit-info p {
+  max-width: 400px;
   color: #464545;
+  font-size: 1.2rem;
 }
 
 section.offers {
@@ -274,6 +278,12 @@ section.offers .wrapper {
 section.offers .underline {
   background-color: white;
 }
+section.offers .left {
+  flex-direction: row;
+}
+section.offers .right {
+  flex-direction: row-reverse;
+}
 section.offers .offers__option {
   display: flex;
   margin: 10px 0;
@@ -287,7 +297,7 @@ section.offers .offers__option-img {
 }
 section.offers .offers__option-info {
   padding: 20px;
-  z-index: 10;
+  z-index: 0;
   background-color: white;
 }
 section.offers .offers__option-heading {
@@ -461,10 +471,10 @@ footer p {
     grid-template-columns: repeat(3, 1fr);
   }
   .achievementSection .achievements-box .achievement .achievement-number {
-    font-size: 80px;
+    font-size: 70px;
   }
   .achievementSection .achievements-box .achievement .achievement-text {
-    font-size: 18px;
+    font-size: 16px;
   }
   .benefit-section .benefit-container {
     grid-template-columns: repeat(2, 1fr);

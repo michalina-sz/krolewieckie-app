@@ -27,7 +27,7 @@ function App() {
 				<div className='benefit-container'>{benefits}</div>
 			</section>
 			<InfoSection />
-			<Products />
+			{/* <Products /> */}
 			<Map />
 			<Footer />
 		</div>

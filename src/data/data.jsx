@@ -1,26 +1,10 @@
 export default [
 	{
-		id: 1,
+		id: 5,
 		icon: 'fa-solid fa-award',
-		title: 'Duży wybór',
+		title: 'Wysoka jakość',
 		description:
-			'W naszej ofercie znajduje się aż dziesięć rodzajów ręcznie lepionych pierogów, które przypominają w smaku te robione przed laty przez nasze mamy i babcie. Oprócz nich na asortyment składają się też surówki, sałatki, kotlety, kluski, krokiety, smalec i wiele innych.',
-		class: 'benefit-box-icon',
-	},
-	{
-		id: 2,
-		icon: 'fa-regular fa-thumbs-up',
-		title: 'Stawiamy na zdrowie',
-		description:
-			'Nasze dania nie zawierają konserwantów, barwników czy dodatków smakowych, są więc zdrowe i pożywne. To właśnie dlatego przez dwadzieścia lat znajdują uznanie u wielu stałych klientów, którzy nam zaufali i docenili naszą kuchnię.',
-		class: 'benefit-box-icon benefit-box-icon--right',
-	},
-	{
-		id: 3,
-		icon: 'fa-regular fa-lightbulb',
-		title: 'Przenosimy w czasie',
-		description:
-			'Dzięki naszym paniom kucharkom wrócisz wspomnieniami do beztroskich czasów dzieciństwa, przypomną Ci się zapachy z babcinej kuchni, a feeria smaków domowych potraw zachwyci i chociaż na chwilę przeniesie Cię w przeszłość.',
+			'Do produkcji wykorzystujemy wyłącznie wysokojakościowe składniki. Mięsa, przyprawy i warzywa pochodzą od lokalnych dostawców, pozbawione są dodatków chemicznych, dzięki czemu cechują się niepowtarzalnym smakiem i aromatem.',
 		class: 'benefit-box-icon',
 	},
 	{
@@ -32,13 +16,29 @@ export default [
 		class: 'benefit-box-icon benefit-box-icon--right',
 	},
 	{
-		id: 5,
-		icon: 'fa-solid fa-award',
-		title: 'Wysoka jakość',
+		id: 2,
+		icon: 'fa-regular fa-thumbs-up',
+		title: 'Stawiamy na zdrowie',
 		description:
-			'Do produkcji wykorzystujemy wyłącznie wysokojakościowe składniki. Mięsa, przyprawy i warzywa pochodzą od lokalnych dostawców, pozbawione są dodatków chemicznych, dzięki czemu cechują się niepowtarzalnym smakiem i aromatem.',
-		class: 'benefit-box-icon',
+			'Nasze dania nie zawierają konserwantów, barwników czy dodatków smakowych, są więc zdrowe i pożywne. To właśnie dlatego przez dwadzieścia lat znajdują uznanie u wielu stałych klientów, którzy nam zaufali i docenili naszą kuchnię.',
+		class: 'benefit-box-icon benefit-box-icon--right',
 	},
+	// {
+	// 	id: 1,
+	// 	icon: 'fa-solid fa-award',
+	// 	title: 'Duży wybór',
+	// 	description:
+	// 		'W naszej ofercie znajduje się aż dziesięć rodzajów ręcznie lepionych pierogów, które przypominają w smaku te robione przed laty przez nasze mamy i babcie. Oprócz nich na asortyment składają się też surówki, sałatki, kotlety, kluski, krokiety, smalec i wiele innych.',
+	// 	class: 'benefit-box-icon',
+	// },
+	// {
+	// 	id: 3,
+	// 	icon: 'fa-regular fa-lightbulb',
+	// 	title: 'Przenosimy w czasie',
+	// 	description:
+	// 		'Dzięki naszym paniom kucharkom wrócisz wspomnieniami do beztroskich czasów dzieciństwa, przypomną Ci się zapachy z babcinej kuchni, a feeria smaków domowych potraw zachwyci i chociaż na chwilę przeniesie Cię w przeszłość.',
+	// 	class: 'benefit-box-icon',
+	// },
 ];
 
 // export default [

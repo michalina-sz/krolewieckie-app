@@ -14,7 +14,7 @@ export default function Map() {
 			<div className='container'>
 				<div className='shop-list-box'>
 			<h2>Gdzie kupić</h2>
-			<div className="underline"></div>
+			<div className="underline-second"></div>
 					{shops.map((shop) => (
 						<Shop key={shop.id} {...shop} />
 					))}
