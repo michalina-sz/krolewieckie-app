@@ -1,10 +1,9 @@
 import React from 'react';
 
-export default function Products() {
+export default function Product() {
 	return (
-		<section className='products-section'>
-			<h2>Produkty</h2>
+		<div className="product-box">
 			
-		</section>
+		</div>
 	);
 }

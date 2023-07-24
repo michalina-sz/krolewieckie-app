@@ -19,7 +19,11 @@ export default function ContactSection() {
 					<h2>KRÓLEWIECKIE</h2>
 				</div>
 				<div className='social-media'>
-					<a href="https://www.facebook.com/recznie.lepione.pierogi.swojskie.wyroby/"><FontAwesomeIcon icon={faFacebook} /></a>
+					<a
+						href='https://www.facebook.com/recznie.lepione.pierogi.swojskie.wyroby/'
+						target='_blank'>
+						<FontAwesomeIcon icon={faFacebook} />
+					</a>
 				</div>
 			</div>
 			<div className='contact-box'>
@@ -32,19 +36,30 @@ export default function ContactSection() {
 				</div>
 				<div className='contact-element'>
 					<FontAwesomeIcon icon={faPhone} />
-					<a href='tel:+48 123 123 123'>+48 123 123 123</a>
+					<a href='tel:+48 123 123 123' target='_blank'>
+						+48 123 123 123
+					</a>
 				</div>
 				<div className='contact-element'>
 					<FontAwesomeIcon icon={faAt} />
-					<a href='mailto:zamowienia@krolewieckie.pl'>
+					<a href='mailto:zamowienia@krolewieckie.pl' target='_blank'>
 						zamowienia@krolewieckie.pl
 					</a>
 				</div>
 			</div>
-			<div className="contact-box">
-				<a href="">o nas</a>
-				<a href="">nasze produkty</a>
-				<a href="">gdzie kupic</a>
+			<div className='contact-box second'>
+				<h4>SEKCJE</h4>
+				<div className='contact-element'>
+					<a href=''>o nas</a>
+				</div>
+				<div className='contact-element'>
+					<a href=''>nasze produkty</a>
+				</div>
+				<div className='contact-element'>
+					<a href='' className='contact-element'>
+						gdzie kupic
+					</a>
+				</div>
 			</div>
 		</section>
 	);

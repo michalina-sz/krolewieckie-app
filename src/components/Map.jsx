@@ -13,11 +13,23 @@ export default function Map() {
 		<section className='map'>
 			<div className='container'>
 				<div className='shop-list-box'>
-			<h2>Gdzie kupić</h2>
-			<div className="underline-second"></div>
-					{shops.map((shop) => (
-						<Shop key={shop.id} {...shop} />
-					))}
+					<div className='map-text'>
+						<h3>Nasze sklepy</h3>
+						<div className='underline'></div>
+						<h2>Gdzie kupić</h2>
+					</div>
+					<div className='shop-list'>
+						<div className='shop-list-one'>
+							{shops.map((shop) => (
+								<Shop key={shop.id} {...shop} />
+							))}
+						</div>
+						<div className='shop-list-two'>
+							{shops.map((shop) => (
+								<Shop key={shop.id} {...shop} />
+							))}
+						</div>
+					</div>
 				</div>
 				<GoogleMap
 					zoom={9.5}

@@ -302,7 +302,7 @@ section.offers {
 	overflow: hidden;
 	background: $light-gradient;
 	.section-heading {
-		color: $font-light;
+		color: $background-dark;
 	}
 	.wrapper {
 		padding: 20px 20px;
@@ -337,6 +337,7 @@ section.offers {
 			margin-bottom: 5px;
 			font-size: 25px;
 			font-weight: 300;
+			color: $background-dark;
 		}
 		&-text {
 			margin-bottom: 5px;
@@ -413,23 +414,92 @@ section.offers {
 // }
 
 .map {
-	width: 100vw;
-	height: 100vh;
-	text-align: center;
+	padding-top: 0;
 	background-color: whitesmoke;
+	// height: 100vh;
+	// display: flex;
+	// justify-content: center;
+	// align-items: center;
+	// padding: 50px 40px;
+
 	.container {
-		width: 100%;
-		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100vw;
+		height: 100vh;
+		max-width: 1000px;
+		padding: 20px;
+		flex-direction: row;
+		.map-text {
+			padding: 0 0 20px 0;
+			flex: 1;
+			h3 {
+				font-weight: normal;
+				text-transform: uppercase;
+			}
+
+			h2 {
+				text-align: left;
+				margin-top: 18px;
+				font-size: 24px;
+			}
+			p {
+				margin-top: 20px;
+			}
+		}
 		.shop-list-box {
-			.shop-box {
-				
+			margin-bottom: 20px;
+			width: 100%;
+			// padding: 0px 40px 50px 40px;
+			display: flex;
+			flex-direction: column;
+			.shop-list {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+
+				.shop-list-one {
+					margin-right: 30px;
+				}
 			}
 		}
 		.map-container {
 			height: 100%;
-			width: 100%;
+			width: 70%
 		}
 	}
+	// .container {
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	.map-text {
+	// 		max-width: 800px;
+	// 		padding: 0 0 20px 0;
+	// 		flex: 1;
+	// 		h3 {
+	// 			font-weight: normal;
+	// 			text-transform: uppercase;
+	// 		}
+
+	// 		h2 {
+	// 			text-align: left;
+	// 			margin-top: 18px;
+	// 			font-size: 24px;
+	// 		}
+	// 		p {
+	// 			margin-top: 20px;
+	// 		}
+	// 	}
+	// 	.shop-list-box {
+	// 		display: flex;
+	// 	}
+	// 	.map-container {
+	// 		height: 100%;
+	// 		width: 100%;
+	// 	}
+	// }
 }
 
 .contactSection {
@@ -442,6 +512,7 @@ section.offers {
 	color: $font-light;
 
 	.contact-box {
+		padding: 0 15px;
 		.logo {
 			display: none;
 			justify-content: center;
@@ -490,10 +561,12 @@ section.offers {
 				text-decoration: none;
 			}
 			a:hover {
-				color: $font-light;
 				color: $font-light-hover;
 			}
 		}
+	}
+	.contact-box.second {
+		text-transform: uppercase;
 	}
 }
 footer {
@@ -544,7 +617,6 @@ footer {
 		height: auto;
 
 		.about-container {
-			max-width: 800px;
 			flex-direction: row;
 
 			.about-img {
