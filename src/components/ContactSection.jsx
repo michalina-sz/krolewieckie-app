@@ -12,7 +12,7 @@ library.add(faFacebook, faAt, faPhone, faLocationDot);
 
 export default function ContactSection() {
 	return (
-		<section className='contactSection'>
+		<section className='contactSection' id='contact'>
 			<div className='contact-box'>
 				<div className='logo'>
 					<img src={logo} className='logo' alt='Logo Królewieckie' />

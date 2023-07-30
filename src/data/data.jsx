@@ -4,15 +4,16 @@ export default [
 		icon: 'fa-solid fa-award',
 		title: 'Wysoka jakość',
 		description:
-			'Do produkcji wykorzystujemy wyłącznie wysokojakościowe składniki. Mięsa, przyprawy i warzywa pochodzą od lokalnych dostawców, pozbawione są dodatków chemicznych, dzięki czemu cechują się niepowtarzalnym smakiem i aromatem.',
+			'Nasze wyroby powstają ze starannie wyselekcjonowanych składników. Dzięki temu możesz mieć pewność, że każdy zakupiony produkt w naszym sklepie zachwyci Cię niepowtarzalnym smakiem i aromatem, spełniając najwyższe standardy jakości.',
 		class: 'benefit-box-icon',
+		
 	},
 	{
 		id: 4,
 		icon: 'fa-regular fa-heart',
 		title: 'Jesteście dla nas najważniejsi',
 		description:
-			'Uznanie klientów oraz wysoka ocena pracy i talentów naszych pań kucharek to dla nas motywacja do stałego podwyższania jakości wyrobów i usług. Staramy się elastycznie podchodzić do potrzeb klientów: stopniowo rozszerzamy asortyment, by trafiać w różne kulinarne upodobania, dzięki czemu każdy może dostosować zakup do swoich indywidualnych potrzeb.',
+			'Staramy się elastycznie podchodzić do potrzeb klientów: stopniowo rozszerzamy asortyment, by trafiać w różne kulinarne upodobania, dzięki czemu każdy może dostosować zakup do swoich indywidualnych potrzeb.',
 		class: 'benefit-box-icon benefit-box-icon--right',
 	},
 	{

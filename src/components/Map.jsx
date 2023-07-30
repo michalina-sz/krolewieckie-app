@@ -1,7 +1,15 @@
-import { useMemo } from 'react';
-import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
+import { useMemo, useEffect } from 'react';
+import {
+	GoogleMap,
+	useLoadScript,
+	MarkerF,
+	InfoWindowF,
+	withScriptjs,
+	withGoogleMap,
+} from '@react-google-maps/api';
 import Shop from './Shop';
 import shops from '../data/shops';
+import marker from '../img/markers/mapbox-marker-icon-purple.svg';
 
 export default function Map() {
 	const { isLoaded } = useLoadScript({
@@ -9,8 +17,9 @@ export default function Map() {
 	});
 	const center = useMemo(() => ({ lat: 52.2, lng: 21.3 }), []);
 	if (!isLoaded) return <div>Loading...</div>;
+
 	return (
-		<section className='map'>
+		<section className='map' id='map' name="sekcja1">
 			<div className='container'>
 				<div className='shop-list-box'>
 					<div className='map-text'>
@@ -34,13 +43,21 @@ export default function Map() {
 				<GoogleMap
 					zoom={9.5}
 					center={center}
-					mapContainerClassName='map-container'>
+					mapContainerClassName='map-container'
+					options={{
+						mapTypeControl: false,
+						fullscreenControl: false,
+						streetViewControl: true,
+					}}>
 					{shops.map((shop) => (
-						<Marker
+						<MarkerF
 							key={shop.id}
 							position={{ lat: shop.lat, lng: shop.lng }}
 							GoogleMap
 							title={shop.name}
+							icon={{
+								url: marker,
+							}}
 						/>
 					))}
 				</GoogleMap>
