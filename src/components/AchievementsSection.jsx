@@ -12,12 +12,12 @@ export default function AchievementsSection() {
 					<div className='achievement-text'>lat na rynku</div>
 				</div>
 				<div className='achievement'>
-					<div className='achievement-number'>7</div>
-					<div className='achievement-text'>punktów sprzedaży</div>
-				</div>
-				<div className='achievement'>
 					<div className='achievement-number'>5000+</div>
 					<div className='achievement-text'>lepionych pierogów dziennie</div>
+				</div>
+				<div className='achievement'>
+					<div className='achievement-number'>7</div>
+					<div className='achievement-text'>punktów sprzedaży</div>
 				</div>
 			</div>
 		</section>

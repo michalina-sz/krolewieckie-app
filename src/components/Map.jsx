@@ -9,7 +9,8 @@ import {
 } from '@react-google-maps/api';
 import Shop from './Shop';
 import shops from '../data/shops';
-import marker from '../img/markers/mapbox-marker-icon-purple.svg';
+// import marker from '../img/markers/mapbox-marker-icon-purple.svg';
+import marker from '../img/markers/krolewieckie-marker3.svg';
 
 export default function Map() {
 	const { isLoaded } = useLoadScript({

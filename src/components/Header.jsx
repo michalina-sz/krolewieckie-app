@@ -11,7 +11,7 @@ export default function Header() {
 					Mamy nadzieję, że nasze wyroby garmażeryjne wniosą do Waszych domów
 					moc przyjemnych doznań w czasie wspólnych, rodzinnych posiłków.
 				</p>
-				<button className='button'>POZNAJ NAS</button>
+				{/* <button className='button'>POZNAJ NAS</button> */}
 			</div>
 		</div>
 	);

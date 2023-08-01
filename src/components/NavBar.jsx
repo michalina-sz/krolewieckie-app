@@ -13,10 +13,10 @@ export default function NavBar() {
 		<BrowserRouter>
 			<nav>
 				<div className='nav-container'>
-					<a href='#' className='logo'>
-						{/* <p>Królewieckie</p> */}
+					{/* <a href='#' className='logo'>
+						<p>Królewieckie</p>
 						<img src={logo} className='logo' alt='Logo Królewieckie' />
-					</a>
+					</a> */}
 					<ul className='links'>
 						<li>
 							<a href='#about'>O nas</a>

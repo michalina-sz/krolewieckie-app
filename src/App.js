@@ -10,6 +10,7 @@ import Map from './components/Map';
 import Products from './components/Product';
 import Footer from './components/Footer';
 import Collaboration from './components/Collaboration';
+import ProductSection from './components/ProductSection';
 
 function App() {
 	const benefits = data.map((item) => {
@@ -28,7 +29,7 @@ function App() {
 				<div className='benefit-container'>{benefits}</div>
 			</section>
 			<InfoSection />
-			{/* <Products /> */}
+			<ProductSection />
 			<Map />
 			<Collaboration />
 			<Footer />
