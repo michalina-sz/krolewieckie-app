@@ -1,5 +1,5 @@
 import React from 'react';
-import aboutImg from '../img/pierogi.jpeg';
+import aboutImg from '../img/img4.jpeg';
 
 export default function AboutSection() {
 	return (

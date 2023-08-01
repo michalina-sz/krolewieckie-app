@@ -381,13 +381,20 @@ section.offers .offers__option-btn:hover {
   z-index: 0;
   background-color: white;
 }
+.product__option-category {
+  font-family: "Great Vibes", cursive;
+  color: #cda27b;
+  font-size: 45px;
+}
 .product__option-heading {
   margin-bottom: 5px;
-  font-size: 25px;
-  font-weight: 300;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
   color: #171717;
 }
 .product__option-text {
+  max-width: 500px;
   margin-bottom: 5px;
   font-size: 13px;
   color: #171717;
@@ -405,7 +412,7 @@ section.offers .offers__option-btn:hover {
 }
 
 .map {
-  background-color: white;
+  background: linear-gradient(115deg, whitesmoke 60%, floralwhite);
   height: calc(100vh - 70px);
 }
 .map .container {

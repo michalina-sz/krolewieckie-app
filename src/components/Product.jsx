@@ -6,7 +6,8 @@ export default function Product() {
 		<div class='product__option left'>
 			<img src={pierogi} alt='' class='product__option-img' sty />
 			<div class='product__option-info'>
-				<h3 class='product__option-heading'>Lorem, ipsum.</h3>
+				<h4 className='product__option-category'>Pierogi</h4>
+				<h3 class='product__option-heading'>Pierogi włoskie</h3>
 				<p class='product__option-text'>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quisquam ea excepturi perspiciatis nostrum iste.
 				</p>
