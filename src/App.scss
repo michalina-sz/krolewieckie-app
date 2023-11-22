@@ -392,10 +392,10 @@ section.offers {
 
 .product {
 	flex-direction: column;
-	// max-width: 1000px;
+	width: 100vw;
 	// position: relative;
 	// overflow: hidden;
-	// background: $light-gradient;
+	// background: #cda37b6f;
 	// .section-heading {
 	// 	color: $background-dark;
 	// }
@@ -427,7 +427,6 @@ section.offers {
 		&-info {
 			padding: 20px;
 			z-index: 0;
-			background-color: $font-light;
 		}
 		&-category {
 			font-family: 'Great Vibes', cursive;

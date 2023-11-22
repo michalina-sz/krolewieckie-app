@@ -1,4 +1,4 @@
-import { useMemo, useEffect } from 'react';
+import { useMemo, useEffect, useState } from 'react';
 import {
 	GoogleMap,
 	useLoadScript,
@@ -13,14 +13,39 @@ import shops from '../data/shops';
 import marker from '../img/markers/krolewieckie-marker3.svg';
 
 export default function Map() {
+	const [activeMarker, setActiveMarker] = useState(null);
 	const { isLoaded } = useLoadScript({
 		googleMapsApiKey: 'AIzaSyALqPbtl2tIQL2aYIA1j9fvV_2ShivoLXE',
 	});
 	const center = useMemo(() => ({ lat: 52.2, lng: 21.3 }), []);
 	if (!isLoaded) return <div>Loading...</div>;
 
+	const handleActiveMarker = (marker) => {
+		console.log('Marker clicked:', marker);
+        setActiveMarker(marker);
+        console.log('Active marker set to:', marker);
+	};
+
+	const renderInfoWindow = (shop) => (
+		<InfoWindowF
+			position={{ lat: shop.lat, lng: shop.lng }}
+			onCloseClick={() => setActiveMarker(null)}>
+			<div>
+				<h3>{shop.name}</h3>
+				<p>
+					<a
+						href={`https://www.google.com/maps/dir/?api=1&destination=${shop.lat},${shop.lng}`}
+						target='_blank'
+						rel='noopener noreferrer'>
+						Zaplanuj trasę
+					</a>
+				</p>
+			</div>
+		</InfoWindowF>
+	);
+
 	return (
-		<section className='map' id='map' name="sekcja1">
+		<section className='map' id='map' name='sekcja1'>
 			<div className='container'>
 				<div className='shop-list-box'>
 					<div className='map-text'>
@@ -51,18 +76,22 @@ export default function Map() {
 						streetViewControl: true,
 					}}>
 					{shops.map((shop) => (
-						<MarkerF
-							key={shop.id}
-							position={{ lat: shop.lat, lng: shop.lng }}
-							GoogleMap
-							title={shop.name}
-							icon={{
-								url: marker,
-							}}
-						/>
+						<>
+							<MarkerF
+								key={shop.id}
+								position={{ lat: shop.lat, lng: shop.lng }}
+								GoogleMap
+								title={shop.name}
+								icon={{
+									url: marker,
+								}}
+							/>
+							{activeMarker === shop.id ? renderInfoWindow(shop) : null}
+						</>
 					))}
 				</GoogleMap>
 			</div>
 		</section>
 	);
 }
+

@@ -353,6 +353,7 @@ section.offers .offers__option-btn:hover {
 
 .product {
   flex-direction: column;
+  width: 100vw;
 }
 .product .wrapper {
   padding: 20px 20px;
@@ -379,7 +380,6 @@ section.offers .offers__option-btn:hover {
 .product__option-info {
   padding: 20px;
   z-index: 0;
-  background-color: white;
 }
 .product__option-category {
   font-family: "Great Vibes", cursive;
