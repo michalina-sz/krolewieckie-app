@@ -1,5 +1,5 @@
 import React from 'react';
-import aboutImg from '../img/img4.jpeg';
+import aboutImg from '../img/img4.webp';
 
 export default function AboutSection() {
 	return (

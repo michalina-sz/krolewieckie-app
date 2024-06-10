@@ -1,7 +1,7 @@
 import React from 'react';
-import img1 from '../img/img1.jpeg';
-import img2 from '../img/img2.jpeg';
-import img3 from '../img/img5.jpeg';
+import img1 from '../img/img1.webp';
+import img2 from '../img/img2.webp';
+import img3 from '../img/img5.webp';
 export default function InfoSection() {
 	return (
 		<section class='offers section-padding section' id='offers'>

@@ -1,5 +1,5 @@
 import React from 'react';
-import pierogi from '../img/products/PIEROGI WŁOSKIE.png'
+import pierogi from '../img/products/PIEROGI-WŁOSKIE.webp';
 
 export default function Product() {
 	return (
@@ -9,11 +9,13 @@ export default function Product() {
 				<h4 className='product__option-category'>Pierogi</h4>
 				<h3 class='product__option-heading'>Pierogi włoskie</h3>
 				<p class='product__option-text'>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quisquam ea excepturi perspiciatis nostrum iste.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+					quisquam ea excepturi perspiciatis nostrum iste.
 				</p>
 				<p class='product__option-text'>
-								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, voluptate.
-							</p>
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae,
+					voluptate.
+				</p>
 				<button class='product__option-btn button'>Wybierz</button>
 			</div>
 		</div>
