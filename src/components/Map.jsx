@@ -17,21 +17,23 @@ export default function Map() {
 	const { isLoaded } = useLoadScript({
 		googleMapsApiKey: 'AIzaSyALqPbtl2tIQL2aYIA1j9fvV_2ShivoLXE',
 	});
-	const center = useMemo(() => ({ lat: 52.2, lng: 21.3 }), []);
+	const center = useMemo(() => ({ lat: 52.1793390, lng: 21.5711289 }), []);
 	if (!isLoaded) return <div>Loading...</div>;
 
 	const handleActiveMarker = (marker) => {
-		console.log('Marker clicked:', marker);
-        setActiveMarker(marker);
-        console.log('Active marker set to:', marker);
+		if (marker === activeMarker) {
+			return;
+		}
+		setActiveMarker(marker);
 	};
 
 	const renderInfoWindow = (shop) => (
 		<InfoWindowF
 			position={{ lat: shop.lat, lng: shop.lng }}
 			onCloseClick={() => setActiveMarker(null)}>
-			<div>
+			<div style={{ padding: '10px' }}>
 				<h3>{shop.name}</h3>
+				<p>{shop.address}</p>
 				<p>
 					<a
 						href={`https://www.google.com/maps/dir/?api=1&destination=${shop.lat},${shop.lng}`}
@@ -49,7 +51,7 @@ export default function Map() {
 			<div className='container'>
 				<div className='shop-list-box'>
 					<div className='map-text'>
-						<h3>Nasze sklepy</h3>
+						<h2>Nasze sklepy</h2>
 						<div className='underline'></div>
 						<h2>Gdzie kupić</h2>
 					</div>
@@ -59,11 +61,11 @@ export default function Map() {
 								<Shop key={shop.id} {...shop} />
 							))}
 						</div>
-						<div className='shop-list-two'>
+						{/* <div className='shop-list-two'>
 							{shops.map((shop) => (
 								<Shop key={shop.id} {...shop} />
 							))}
-						</div>
+						</div> */}
 					</div>
 				</div>
 				<GoogleMap
@@ -85,6 +87,7 @@ export default function Map() {
 								icon={{
 									url: marker,
 								}}
+								onClick={() => handleActiveMarker(shop.id)}
 							/>
 							{activeMarker === shop.id ? renderInfoWindow(shop) : null}
 						</>
@@ -94,4 +97,3 @@ export default function Map() {
 		</section>
 	);
 }
-
