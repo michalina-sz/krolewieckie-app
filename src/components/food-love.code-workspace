@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "../../../food-love"
+		},
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../Weather-App"
+		},
+		{
+			"path": "../../../RWD-WEBSITE"
+		},
+		{
+			"path": "../../../onlineStore"
+		},
+		{
+			"path": "../../../inz_app"
+		},
+		{
+			"path": "../../../react crash course"
+		},
+		{
+			"path": "../../../posts-app"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "RWD-WEBSITE"
+	}
+}

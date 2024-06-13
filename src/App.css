@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   padding: 0;
@@ -8,7 +9,7 @@
 html {
   font-size: 10px;
   scroll-behavior: smooth;
-  scroll-padding-top: 70px;
+  scroll-padding-top: 60px; /* Wysokość nagłówka */
 }
 
 body {
@@ -61,13 +62,13 @@ h2 {
 }
 
 .button:hover {
-  border: 1px solid rgba(255, 255, 255, 0.671);
-  color: rgba(255, 255, 255, 0.671);
+  border: 1px solid #82674e;
+  color: #82674e;
 }
 
 /* ---------------- NAV SECTION -------------- */
 nav {
-  position: fixed;
+  position: sticky;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,7 +79,7 @@ nav {
   height: 70px;
   background-color: whitesmoke;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.219);
-  z-index: 1;
+  z-index: 1000;
 }
 nav .nav-container {
   display: flex;
@@ -118,30 +119,103 @@ nav .nav-container .links li a {
   color: #171717;
 }
 nav .nav-container .links li a:hover {
-  color: rgba(255, 255, 255, 0.671);
+  color: #82674e;
 }
-nav .nav-container .burger-btn-box {
-  display: flex;
-  justify-content: flex-end;
+
+/**** MOBILE NAV  ----------- /*
+/* Override default styles from react-burger-menu */
+/* Override default styles from react-burger-menu */
+.bm-burger-button {
+  position: sticky;
+  width: 30px;
+  height: 30px;
+  right: 36px;
+  top: 20px;
 }
-nav .nav-container .burger-btn-box .button {
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: rgba(55, 58, 71, 0.5098039216);
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+  display: none;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: whitesmoke;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  margin-top: 20px;
   border: none;
+  z-index: 0;
 }
-nav .nav-container .burger-btn-box .button .icon {
-  font-size: 28px;
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  align-content: center;
+  color: #373a47;
+  background: whitesmoke;
+  box-shadow: none;
+  padding: 0.8em;
+  padding-top: 20px;
+}
+
+/* Individual item */
+.bm-item {
+  text-align: left;
+  display: inline-block;
+  font-size: 30px;
+  padding: 15px 5px;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  display: none;
 }
 
 /* ---------------- HERO SECTION -------------- */
 .hero-img {
-  margin-top: 70px;
   position: relative;
+  height: 40vh;
   background-image: linear-gradient(rgba(7, 3, 0, 0.603), rgba(52, 40, 40, 0.664)), url("./img/bg.jpeg");
   background-position: bottom right;
   background-attachment: fixed;
   background-size: cover;
 }
 .hero-img .hero-text {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -152,9 +226,13 @@ nav .nav-container .burger-btn-box .button .icon {
   transform: translate(-50%, -50%);
   color: white;
 }
+.hero-img .hero-text img {
+  width: 100px;
+  height: 100px;
+}
 .hero-img .hero-text h2 {
   letter-spacing: 4px;
-  font-size: 23px;
+  font-size: 18px;
 }
 .hero-img .hero-text p {
   margin: 30px 0 15px 0;
@@ -292,7 +370,7 @@ section.offers .section-heading {
 }
 section.offers .wrapper {
   padding: 20px 20px;
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
 }
 section.offers .underline {
@@ -305,6 +383,7 @@ section.offers .right {
   flex-direction: column;
 }
 section.offers .offers__option {
+  width: 100%;
   display: flex;
   margin: 10px 0;
   box-shadow: 5px 5px 10px rgba(34, 34, 34, 0.19);
@@ -358,75 +437,95 @@ section.products {
   justify-content: center;
   align-items: center;
 }
-
-.product {
+section.products .products-container {
+  display: flex;
   flex-direction: column;
-  width: 100vw;
-  margin: 0 20px;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
 }
-.product .wrapper {
+section.products .products-container .product {
+  width: 100%;
+  margin: 0 20px;
+  padding: 10px;
+}
+section.products .products-container .product .wrapper {
   padding: 20px 20px;
   max-width: 800px;
   margin: 0 auto;
 }
-.product .underline {
+section.products .products-container .product .underline {
   background-color: white;
 }
-.product__option {
+section.products .products-container .product__option {
   display: flex;
+  flex-direction: column;
   margin: 10px 0;
+  width: 100%;
+  height: 250px;
 }
-.product__option-img {
-  width: 200px;
-  height: auto;
+section.products .products-container .product__option-img {
+  width: auto;
+  height: 100%;
 }
-.product__option-info {
+section.products .products-container .product__option-info {
   padding: 20px;
   z-index: 0;
   background: linear-gradient(115deg, whitesmoke 60%, floralwhite);
+  flex: 1;
 }
-.product__option-category {
+section.products .products-container .product__option-category {
   font-family: "Great Vibes", cursive;
   color: #cda27b;
   font-size: 45px;
 }
-.product__option-heading {
+section.products .products-container .product__option-heading {
   margin-bottom: 5px;
   font-size: 20px;
   font-weight: 400;
   text-transform: uppercase;
   color: #171717;
 }
-.product__option-text {
+section.products .products-container .product__option-text {
   max-width: 500px;
   margin-bottom: 5px;
   font-size: 13px;
   color: #171717;
+  overflow: scroll;
 }
-.product__option-btn {
+section.products .products-container .product__option-btn {
   margin-top: 10px;
   color: #171717;
   border: 1px solid #cda27b;
 }
-.product__option-btn::before {
+section.products .products-container .product__option-btn::before {
   background-color: #cda27b;
 }
-.product__option-btn:hover {
+section.products .products-container .product__option-btn:hover {
   background-color: #cda27b;
 }
-.product__option.left {
+section.products .products-container .product__option.left {
   flex-direction: row;
 }
-.product__option.right {
+section.products .products-container .product__option.left .product__option-info {
+  margin-left: 20px;
+}
+section.products .products-container .product__option.right {
   flex-direction: row-reverse;
 }
-.product__option.right-info {
+section.products .products-container .product__option.right .product__option-info {
   margin-right: 20px;
 }
 
 .map {
   background: linear-gradient(115deg, whitesmoke 60%, floralwhite);
   height: calc(100vh - 70px);
+}
+.map h2 {
+  text-align: center;
+  margin-bottom: 26px;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 .map .container {
   display: flex;
@@ -441,7 +540,7 @@ section.products {
   margin-bottom: 20px;
   padding: 0 50px;
   width: 50%;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: flex-start;
 }
@@ -452,12 +551,6 @@ section.products {
 .map .container .shop-list-box .map-text h3 {
   font-weight: normal;
   text-transform: uppercase;
-}
-.map .container .shop-list-box .map-text h2 {
-  text-align: left;
-  margin-top: 18px;
-  font-size: 24px;
-  margin-bottom: 20px;
 }
 .map .container .shop-list-box .map-text p {
   margin-top: 20px;
@@ -514,7 +607,7 @@ section.products {
   color: white;
 }
 .contactSection .contact-box .social-media svg:hover {
-  color: rgba(255, 255, 255, 0.671);
+  color: #82674e;
 }
 .contactSection .contact-box {
   display: flex;
@@ -544,7 +637,7 @@ section.products {
   text-decoration: none;
 }
 .contactSection .contact-box .contact-element a:hover {
-  color: rgba(255, 255, 255, 0.671);
+  color: #82674e;
 }
 .contactSection .contact-box.second {
   text-transform: uppercase;
@@ -566,20 +659,32 @@ footer .underline {
 footer p {
   padding: 12px 5px;
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.671);
+  color: #82674e;
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  nav {
+    display: flex;
+  }
   nav .nav-container .links {
     display: flex;
   }
-  nav .nav-container .burger-btn-box {
+  .bm-burger-button,
+  .bm-menu {
     display: none;
   }
   .hero-img {
+    padding-top: 70px;
     min-height: 45vh;
     height: auto;
+  }
+  .hero-img .hero-text img {
+    width: auto;
+    height: auto;
+  }
+  .hero-img .hero-text h2 {
+    font-size: 24px;
   }
   .about {
     height: auto;
@@ -637,11 +742,8 @@ footer p {
     width: 40%;
     height: 100%;
   }
-  .product .left {
-    flex-direction: row;
-  }
-  .product .right {
-    flex-direction: row-reverse;
+  section.map .container .shop-list-box {
+    display: flex;
   }
   .contactSection {
     width: 100%;
@@ -695,7 +797,7 @@ footer p {
   }
   .contactSection .contact-box .contact-element a:hover {
     color: white;
-    color: rgba(255, 255, 255, 0.671);
+    color: #82674e;
   }
   .contactSection .contact-box.second {
     display: block;

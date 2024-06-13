@@ -17,7 +17,7 @@ export default function Map() {
 	const { isLoaded } = useLoadScript({
 		googleMapsApiKey: 'AIzaSyALqPbtl2tIQL2aYIA1j9fvV_2ShivoLXE',
 	});
-	const center = useMemo(() => ({ lat: 52.1793390, lng: 21.5711289 }), []);
+	const center = useMemo(() => ({ lat: 52.179339, lng: 21.5711289 }), []);
 	if (!isLoaded) return <div>Loading...</div>;
 
 	const handleActiveMarker = (marker) => {
@@ -48,12 +48,12 @@ export default function Map() {
 
 	return (
 		<section className='map' id='map' name='sekcja1'>
+			<h2>Nasze sklepy</h2>
 			<div className='container'>
 				<div className='shop-list-box'>
 					<div className='map-text'>
-						<h2>Nasze sklepy</h2>
+						<h3>Gdzie kupić</h3>
 						<div className='underline'></div>
-						<h2>Gdzie kupić</h2>
 					</div>
 					<div className='shop-list'>
 						<div className='shop-list-one'>
